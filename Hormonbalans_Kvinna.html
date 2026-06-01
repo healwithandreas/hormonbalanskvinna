@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hormonbalans för kvinnor – healwithandreas</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --rose:        #9A4A5A;
+  --rose-mid:    #7A2A3A;
+  --rose-light:  #C47A8A;
+  --rose-pale:   #F5E8EA;
+  --sage:        #3A6040;
+  --sage-mid:    #2A4A30;
+  --sage-light:  #6A9A70;
+  --sage-pale:   #E4F0E8;
+  --gold:        #C49A2A;
+  --gold-pale:   #FAF0D0;
+  --plum:        #3A1A2A;
+  --plum-mid:    #2A1018;
+  --dark:        #0E080C;
+  --text:        #2A1018;
+  --muted:       #806070;
+  --cream:       #F8F4ED;
+  --white:       #FDF8F5;
+}
+
+body {
+  background: var(--dark);
+  color: #EEE4E8;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0A0408 0%, #140810 50%, #1A0C14 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-lines {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(196,122,138,0.07), transparent);
+  height: 1px;
+}
+
+.line-1 { top: 25%; left: 0; right: 0; transform: rotate(-5deg); }
+.line-2 { top: 45%; left: 0; right: 0; transform: rotate(3deg); }
+.line-3 { top: 70%; left: 0; right: 0; transform: rotate(-2deg); }
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.glow-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(154,74,90,0.35) 0%, transparent 70%); top: -200px; right: -200px; }
+.glow-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(58,96,64,0.25) 0%, transparent 70%); bottom: -100px; left: -100px; }
+
+.hero-inner { position: relative; z-index: 2; max-width: 700px; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(196,122,138,0.12);
+  border: 1px solid rgba(196,122,138,0.3);
+  border-radius: 4px;
+  padding: 8px 22px;
+  margin-bottom: 40px;
+  animation: fadeDown 0.8s ease both;
+}
+
+.badge-text {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rose-light);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(50px, 9vw, 96px);
+  font-weight: 900;
+  line-height: 0.95;
+  color: #FCF0F3;
+  margin-bottom: 6px;
+  animation: fadeDown 0.8s 0.1s ease both;
+  letter-spacing: -0.02em;
+}
+
+h1 span {
+  display: block;
+  color: var(--rose-light);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.hero-line {
+  width: 80px; height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin: 32px auto;
+  animation: fadeDown 0.8s 0.2s ease both;
+}
+
+.hero-sub {
+  font-size: clamp(15px, 2.5vw, 17px);
+  color: rgba(238,228,232,0.55);
+  font-weight: 300;
+  line-height: 1.75;
+  max-width: 480px;
+  margin: 0 auto 48px;
+  animation: fadeDown 0.8s 0.3s ease both;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+.stat { text-align: center; }
+.stat-n {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--rose-light);
+  line-height: 1;
+}
+.stat-l { font-size: 11px; color: rgba(238,228,232,0.4); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+.wave {
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  fill: #120810;
+}
+
+/* ── SECTIONS ── */
+section { padding: 80px 24px; }
+.container { max-width: 940px; margin: 0 auto; }
+
+.section-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--rose-light);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 50px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #FCF0F3;
+  margin-bottom: 14px;
+}
+
+.section-title em { color: var(--rose-light); font-style: italic; }
+.section-desc { font-size: 15.5px; color: rgba(238,228,232,0.5); line-height: 1.7; max-width: 560px; margin-bottom: 48px; }
+
+/* ── ÖSTROGEN HIGH/LOW ── */
+.t-section { background: #120810; }
+
+.t-big {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 640px) { .t-big { grid-template-columns: 1fr; } }
+
+.t-panel {
+  padding: 36px 32px;
+  position: relative;
+}
+
+.t-panel.good { background: #0A180A; }
+.t-panel.bad  { background: #1A080C; }
+
+.t-panel-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.t-panel.good .t-panel-label { color: #5AAA6A; }
+.t-panel.bad  .t-panel-label { color: #C47A8A; }
+
+.t-panel-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #FCF0F3;
+}
+
+.t-list { list-style: none; }
+.t-list li {
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  gap: 10px;
+  color: rgba(238,228,232,0.7);
+  line-height: 1.4;
+}
+.t-list li:last-child { border-bottom: none; }
+.t-panel.good .t-list li::before { content: '↑'; color: #5AAA6A; flex-shrink: 0; font-weight: 700; }
+.t-panel.bad  .t-list li::before { content: '↓'; color: #C47A8A; flex-shrink: 0; font-weight: 700; }
+
+/* ── HORMONE CARDS ── */
+.hormones-section { background: #0E080C; }
+
+.hormone-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.h-card {
+  background: #180C14;
+  border-radius: 14px;
+  padding: 28px;
+  border-left: 3px solid;
+  transition: transform 0.2s;
+}
+
+.h-card:hover { transform: translateY(-3px); }
+.h-card.oe  { border-color: var(--rose-light); }
+.h-card.pr  { border-color: var(--sage-light); }
+.h-card.co  { border-color: #9A6A3A; }
+.h-card.gh  { border-color: var(--gold); }
+
+.h-icon { font-size: 28px; margin-bottom: 14px; }
+.h-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+.h-card.oe  .h-name { color: var(--rose-light); }
+.h-card.pr  .h-name { color: var(--sage-light); }
+.h-card.co  .h-name { color: #C49A6A; }
+.h-card.gh  .h-name { color: var(--gold); }
+.h-desc { font-size: 13.5px; color: rgba(238,228,232,0.55); line-height: 1.65; margin-bottom: 14px; }
+.h-fact { font-size: 12px; font-weight: 600; padding: 8px 12px; border-radius: 8px; }
+.h-card.oe  .h-fact { color: var(--rose-light); background: rgba(196,122,138,0.1); }
+.h-card.pr  .h-fact { color: var(--sage-light); background: rgba(106,154,112,0.1); }
+.h-card.co  .h-fact { color: #C49A6A; background: rgba(196,154,106,0.1); }
+.h-card.gh  .h-fact { color: var(--gold); background: rgba(196,154,42,0.1); }
+
+/* ── MENSCYKEL ── */
+.cycle-section { background: #180C14; }
+
+.cycle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.cycle-panel {
+  padding: 32px 24px;
+  background: #0E080C;
+  border: 1px solid rgba(196,122,138,0.08);
+  transition: background 0.2s;
+}
+.cycle-panel:hover { background: rgba(154,74,90,0.12); }
+
+.cycle-num {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.cycle-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FCF0F3;
+  margin-bottom: 6px;
+}
+
+.cycle-days {
+  font-size: 11.5px;
+  color: var(--rose-light);
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+.cycle-desc { font-size: 13px; color: rgba(238,228,232,0.5); line-height: 1.6; }
+
+/* ── OPTIMERING ── */
+.optimize-section { background: #180C14; }
+
+.opt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.opt-card {
+  background: #0E080C;
+  border-radius: 14px;
+  padding: 24px;
+  border: 1px solid rgba(196,122,138,0.12);
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.opt-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rose-light), transparent);
+}
+
+.opt-card:hover {
+  border-color: rgba(196,122,138,0.3);
+  transform: translateY(-3px);
+}
+
+.opt-icon { font-size: 28px; margin-bottom: 12px; }
+.opt-title { font-weight: 600; font-size: 15px; color: #FCF0F3; margin-bottom: 8px; }
+.opt-desc { font-size: 13px; color: rgba(238,228,232,0.5); line-height: 1.6; margin-bottom: 12px; }
+.opt-tip { font-size: 12px; font-weight: 600; color: var(--rose-light); }
+
+/* ── KILLERS ── */
+.killers-section { background: #0E080C; }
+
+.killers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.killer-card {
+  background: rgba(154,74,90,0.06);
+  border: 1px solid rgba(154,74,90,0.15);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.2s;
+}
+
+.killer-card:hover { border-color: rgba(154,74,90,0.3); }
+
+.killer-icon { font-size: 26px; margin-bottom: 12px; }
+.killer-name { font-weight: 600; font-size: 14.5px; color: #C47A8A; margin-bottom: 8px; }
+.killer-text { font-size: 13px; color: rgba(238,228,232,0.5); line-height: 1.6; margin-bottom: 12px; }
+.killer-fix { font-size: 12px; font-weight: 600; color: #5AAA6A; background: rgba(90,170,106,0.08); padding: 7px 12px; border-radius: 8px; }
+
+/* ── NÄRING ── */
+.nutrition-section { background: #180C14; }
+
+.nut-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.nut-card {
+  background: #0E080C;
+  border-radius: 12px;
+  padding: 22px;
+  border-top: 2px solid var(--rose-light);
+  transition: transform 0.2s;
+}
+
+.nut-card:hover { transform: translateY(-3px); }
+.nut-icon { font-size: 24px; margin-bottom: 10px; }
+.nut-name { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--rose-light); margin-bottom: 6px; }
+.nut-why { font-size: 12.5px; color: rgba(238,228,232,0.5); line-height: 1.55; margin-bottom: 10px; }
+.nut-src { font-size: 11.5px; color: var(--gold); font-weight: 600; }
+
+/* ── MORGONPROTOKOLL ── */
+.protocol-section { background: #0E080C; }
+
+.protocol-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(196,122,138,0.12);
+}
+
+.protocol-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 22px 28px;
+  background: #180C14;
+  border-bottom: 1px solid rgba(196,122,138,0.08);
+  transition: background 0.2s;
+}
+
+.protocol-item:last-child { border-bottom: none; }
+.protocol-item:hover { background: #1e1018; }
+
+.protocol-time {
+  flex-shrink: 0;
+  background: var(--plum);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--rose-light);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.protocol-content h4 { font-size: 14px; font-weight: 600; color: #FCF0F3; margin-bottom: 4px; }
+.protocol-content p  { font-size: 12.5px; color: rgba(238,228,232,0.45); line-height: 1.5; }
+
+/* ── TEASER ── */
+.teaser-section {
+  background: linear-gradient(160deg, #08040A 0%, #100810 100%);
+  text-align: center;
+  padding: 100px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.teaser-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(154,74,90,0.35) 0%, transparent 65%);
+}
+
+.teaser-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+
+.teaser-badge {
+  display: inline-block;
+  background: rgba(196,154,42,0.15);
+  border: 1px solid rgba(196,154,42,0.35);
+  border-radius: 4px;
+  padding: 7px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+}
+
+.teaser-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 6vw, 62px);
+  font-weight: 900;
+  color: #FCF0F3;
+  line-height: 1.0;
+  margin-bottom: 6px;
+}
+
+.teaser-title span { display: block; color: var(--rose-light); font-style: italic; }
+
+.teaser-line { width: 80px; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); margin: 28px auto; }
+
+.teaser-text { font-size: 15.5px; color: rgba(238,228,232,0.5); line-height: 1.7; margin-bottom: 40px; }
+
+.teaser-modules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 44px;
+  text-align: left;
+}
+
+@media (max-width: 500px) { .teaser-modules { grid-template-columns: 1fr; } }
+
+.teaser-module {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(196,122,138,0.07);
+  border: 1px solid rgba(196,122,138,0.12);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.mod-n {
+  width: 26px; height: 26px;
+  background: var(--rose-mid);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+  color: var(--rose-light);
+  flex-shrink: 0;
+}
+
+.mod-t { font-size: 12.5px; color: rgba(238,228,232,0.65); line-height: 1.3; }
+
+.teaser-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--rose);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 16px 36px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: 0.04em;
+}
+
+.teaser-cta:hover {
+  background: var(--rose-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(196,122,138,0.35);
+}
+
+.disclaimer {
+  margin-top: 36px;
+  font-size: 11px;
+  color: rgba(238,228,232,0.25);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeUp   { from { opacity:0; transform:translateY(16px);  } to { opacity:1; transform:translateY(0); } }
+
+.reveal { opacity:0; transform:translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+@media (max-width:600px) {
+  section { padding: 60px 20px; }
+  .hero-stats { gap: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-lines">
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+    <div class="line line-3"></div>
+  </div>
+  <div class="hero-glow glow-1"></div>
+  <div class="hero-glow glow-2"></div>
+
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="badge-text">Gratis guide · healwithandreas</span>
+    </div>
+
+    <h1>Hormonbalans<span>för kvinnor</span></h1>
+
+    <div class="hero-line"></div>
+
+    <p class="hero-sub">Östrogen är bara början. Förstår du ditt hormonsystem förstår du din energi, din cykel, ditt humör och din hälsa på ett fundamentalt nytt sätt.</p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-n">10%</div>
+        <div class="stat-l">Har PCOS i fertil ålder</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">80%</div>
+        <div class="stat-l">Upplever PMS-symptom</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">~10 år</div>
+        <div class="stat-l">Perimenopausens varaktighet</div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,30 C360,70 1080,0 1440,40 L1440,60 L0,60 Z"/>
+  </svg>
+</section>
+
+<!-- ÖSTROGEN HIGH/LOW -->
+<section class="t-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Hormonbalans</div>
+    <h2 class="section-title reveal">Vad balanserade och obalanserade hormoner <em>faktiskt innebär</em></h2>
+    <p class="section-desc reveal">Hormonella obalanser är vanliga – men inte oundvikliga. Kroppen ger signaler länge innan problemen sätter sig.</p>
+
+    <div class="t-big reveal">
+      <div class="t-panel good">
+        <div class="t-panel-label">Balanserade hormoner</div>
+        <div class="t-panel-title">Så här mår du</div>
+        <ul class="t-list">
+          <li>Jämn och stabil energi under hela dagen</li>
+          <li>Regelbunden och smärtfri menscykel</li>
+          <li>Stabilt humör och emotionell resiliens</li>
+          <li>God sömn och naturlig vakenhet på morgonen</li>
+          <li>Hälsosam libido och välmående</li>
+          <li>Klar hud och friskt hår</li>
+          <li>God kognitiv förmåga och fokus</li>
+          <li>Starka ben och frisk metabolism</li>
+        </ul>
+      </div>
+
+      <div class="t-panel bad">
+        <div class="t-panel-label">Hormonobalans</div>
+        <div class="t-panel-title">Signaler att känna igen</div>
+        <ul class="t-list">
+          <li>Kronisk trötthet trots tillräcklig sömn</li>
+          <li>Kraftiga, smärtsamma eller oregelbundna blödningar</li>
+          <li>Humörsvängningar, irritabilitet eller ångest</li>
+          <li>Sömnsvårigheter – speciellt dag 20–28</li>
+          <li>Akne, håravfall eller ökad kroppsbehåring</li>
+          <li>Svullnad och ömma bröst premenstruellt</li>
+          <li>Svårighet att gå ner i vikt kring midjan</li>
+          <li>Minskad libido och vaginal torrhet</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NYCKELHORMONERNA -->
+<section class="hormones-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Hormonsystemet</div>
+    <h2 class="section-title reveal">Kvinnans <em>fyra nyckelspelare</em></h2>
+    <p class="section-desc reveal">Östrogen är inte ensamt. Det samverkar med tre andra kritiska hormoner du behöver förstå för att förstå din kropp.</p>
+
+    <div class="hormone-row reveal">
+      <div class="h-card oe">
+        <div class="h-icon">🌸</div>
+        <div class="h-name">Östrogen</div>
+        <div class="h-desc">Produceras primärt i äggstockarna under hypofysens kontroll. Styr livmoderslemhinnans uppbyggnad, bentäthet, hudkvalitet, humör, minne och kardiovaskulär hälsa. Varierar kraftigt under cykeln och sjunker vid klimakteriet. Östrogen i rätt balans är grunden för välmående – varken för högt eller för lågt.</div>
+        <div class="h-fact">Viktigt: Östrogen påverkar över 400 funktioner i kroppen</div>
+      </div>
+
+      <div class="h-card pr">
+        <div class="h-icon">🌿</div>
+        <div class="h-name">Progesteron</div>
+        <div class="h-desc">Kroppens naturliga lugnande hormon. Produceras efter ägglossning och balanserar östrogenets effekter. Låga nivåer är den vanligaste orsaken till PMS, sömnproblem och ångest i lutealfas. Kronisk stress stjäl pregnenolon – råvaran för progesteron – och är den primära orsaken till progesteronbrist i dag.</div>
+        <div class="h-fact">Kritiskt: Utan ägglossning produceras knappt något progesteron</div>
+      </div>
+
+      <div class="h-card co">
+        <div class="h-icon">⚡</div>
+        <div class="h-name">Kortisol</div>
+        <div class="h-desc">Stresshormonet som konkurrerar direkt med progesteron om pregnenolon – råvaran för båda. Vid kronisk stress prioriterar kroppen kortisol. Progesteronet sjunker, östrogenet dominerar. Låggradig kronisk stress är idag den vanligaste orsaken till hormonell obalans hos kvinnor i fertil ålder.</div>
+        <div class="h-fact">Kritiskt: Kronisk stress är den vanligaste orsaken till progesteronbrist</div>
+      </div>
+
+      <div class="h-card gh">
+        <div class="h-icon">🌙</div>
+        <div class="h-name">Insulin</div>
+        <div class="h-desc">Ofta förbisett – men insulin påverkar direkt östrogen och testosteron. Insulinresistens driver PCOS, stör ägglossning och ökar androgener. Förhöjt insulin ökar LH-pulsfrekvens vilket stimulerar äggstockarna att producera mer testosteron. Blodsockerstabilitet är hormonbalansens fundament.</div>
+        <div class="h-fact">Viktigt: Insulinresistens finns bakom de flesta PCOS-fall</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENSCYKELN -->
+<section class="cycle-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Menscykelns fyra faser</div>
+    <h2 class="section-title reveal">Din cykel – ett månadsvis <em>hormonellt flöde</em></h2>
+    <p class="section-desc reveal">En genomsnittlig cykel är 28 dagar – men variationer är helt normala. Varje fas har sin unika hormonprofil, energikvalitet och möjligheter.</p>
+
+    <div class="cycle-grid reveal">
+      <div class="cycle-panel">
+        <div class="cycle-num">Fas 01</div>
+        <div class="cycle-name">Menstruation</div>
+        <div class="cycle-days">Dag 1–5</div>
+        <div class="cycle-desc">Östrogen och progesteron är låga. Kroppen stöter bort slemhinnan. Vila och återhämtning prioriteras naturligt – lyssna på kroppen. Prosetin frisätts och kan orsaka kramper.</div>
+      </div>
+      <div class="cycle-panel">
+        <div class="cycle-num">Fas 02</div>
+        <div class="cycle-name">Follikelfas</div>
+        <div class="cycle-days">Dag 6–13</div>
+        <div class="cycle-desc">Östrogen stiger successivt. Energin ökar, fokus skärps, humöret lyfter och kreativiteten blomstrar. Utmärkt period för socialt arbete, nya projekt och intensivare träning.</div>
+      </div>
+      <div class="cycle-panel">
+        <div class="cycle-num">Fas 03</div>
+        <div class="cycle-name">Ägglossning</div>
+        <div class="cycle-days">Dag 14</div>
+        <div class="cycle-desc">LH-topp utlöser ägglossning. Östrogen och testosteron är som högst. Kommunikation, karisma och fysisk prestationsförmåga är alla förhöjda. Fertilitets-fönstret öppnas.</div>
+      </div>
+      <div class="cycle-panel">
+        <div class="cycle-num">Fas 04</div>
+        <div class="cycle-name">Lutealfas</div>
+        <div class="cycle-days">Dag 15–28</div>
+        <div class="cycle-desc">Progesteron dominerar. Energin vänder inåt. PMS-symptom uppstår om hormonbalansen är skev – ett viktigt signalfönster om progesteronbrist eller östrogendominans.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPTIMERING -->
+<section class="optimize-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Naturlig optimering</div>
+    <h2 class="section-title reveal">Fem bevisade sätt att <em>balansera hormoner</em></h2>
+    <p class="section-desc reveal">Inga piller. Inga snabba lösningar. Bara biologi och livsstil i harmoni.</p>
+
+    <div class="opt-grid reveal">
+      <div class="opt-card">
+        <div class="opt-icon">🍽️</div>
+        <div class="opt-title">Blodsockerstabilitet</div>
+        <div class="opt-desc">Ät proteinrikt frukost, undvik att hoppa över måltider och minimera sockertoppar. Stabilt blodsocker sänker insulin och är grunden för hormonbalans – särskilt vid PCOS.</div>
+        <div class="opt-tip">→ Protein + fett vid varje måltid, undvik fasta vid PMS</div>
+      </div>
+
+      <div class="opt-card">
+        <div class="opt-icon">😴</div>
+        <div class="opt-title">Sömnkvalitet</div>
+        <div class="opt-desc">Under djupsömn sker hormonell återhämtning. Progesteron frisätts och kortisol återställs. Kronisk sömnbrist är en av de snabbaste vägarna till hormonobalans och PMS-förvärring.</div>
+        <div class="opt-tip">→ Mörkt rum, 18 grader, konsekvent läggtid varje kväll</div>
+      </div>
+
+      <div class="opt-card">
+        <div class="opt-icon">☀️</div>
+        <div class="opt-title">Solljus & D-vitamin</div>
+        <div class="opt-desc">D-vitamin är direkt kopplat till cykelhälsa och fertilitet. Morgonljus synkroniserar den cirkadiska klockan och stöder kortisol-koreografin som påverkar hela hormonsystemet.</div>
+        <div class="opt-tip">→ 20 min morgonljus dagligen + tillskott under vintern</div>
+      </div>
+
+      <div class="opt-card">
+        <div class="opt-icon">🥩</div>
+        <div class="opt-title">Näring & hormoner</div>
+        <div class="opt-desc">Hormoner byggs av kolesterol och aminosyror. Korsblommiga grönsaker stöder östrogenmetabolism i levern. Magnesium och zink är kritiska kofaktorer i hormonproduktionen.</div>
+        <div class="opt-tip">→ Lever, ägg, broccoli, spenat och pumpakärnor dagligen</div>
+      </div>
+
+      <div class="opt-card">
+        <div class="opt-icon">🧘</div>
+        <div class="opt-title">Stressreglering</div>
+        <div class="opt-desc">Kortisol och progesteron konkurrerar om samma råvara. Daglig parasympatisk aktivering – andning, natur, vila – är en direkt hormonal intervention, inte bara psykologi.</div>
+        <div class="opt-tip">→ Box breathing 4-4-4-4, 2h natur/vecka, tydliga gränser</div>
+      </div>
+
+      <div class="opt-card">
+        <div class="opt-icon">🔄</div>
+        <div class="opt-title">Cykelsynkning</div>
+        <div class="opt-desc">Anpassa kost, träningsintensitet och socialt liv efter cykelns faser. Arbeta med biologin, inte mot den. Intensivare träning i follikelfas – mer lugn och återhämtning i lutealfas.</div>
+        <div class="opt-tip">→ Kartlägg din cykel i 3 månader för att se ditt mönster</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KILLERS -->
+<section class="killers-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Undvik detta</div>
+    <h2 class="section-title reveal">Det som <em>saboterar</em> dina hormoner</h2>
+    <p class="section-desc reveal">Att ta bort det som stör är lika effektivt som att addera det som hjälper.</p>
+
+    <div class="killers-grid reveal">
+      <div class="killer-card">
+        <div class="killer-icon">🍭</div>
+        <div class="killer-name">Socker & ultraprocessad mat</div>
+        <div class="killer-text">Högt insulin stör ägglossning, ökar androgener och driver östrogendominans. Blodsockerkaos är den vanligaste bakomliggande orsaken till PMS och PCOS-symptom.</div>
+        <div class="killer-fix">✓ Minimera raffinerat socker och processad mat – prioritera riktiga råvaror</div>
+      </div>
+
+      <div class="killer-card">
+        <div class="killer-icon">📱</div>
+        <div class="killer-name">Kronisk stress</div>
+        <div class="killer-text">HPA-axelns kroniska aktivering stjäl pregnenolon från progesteronet. Resultatet: progesteronbrist, östrogendominans och förvärrad PMS. Låggradig stress är värre än akut.</div>
+        <div class="killer-fix">✓ Stresshantering som hormonstrategi – inte bara psykologi</div>
+      </div>
+
+      <div class="killer-card">
+        <div class="killer-icon">🧴</div>
+        <div class="killer-name">Xenoöstrogener</div>
+        <div class="killer-text">Syntetiska östrogenliknande ämnen i plast, parfym och konventionell hudvård binder till östrogenreceptorer och bidrar till östrogendominans. BPA och ftalater är värst.</div>
+        <div class="killer-fix">✓ Glas och rostfritt stål, naturlig hudvård, parfymfritt</div>
+      </div>
+
+      <div class="killer-card">
+        <div class="killer-icon">🍺</div>
+        <div class="killer-name">Alkohol</div>
+        <div class="killer-text">Belastar levern som metaboliserar östrogen. Hämmar östrogenets nedbrytning, höjer östrogennivåerna och stör sömncykeln. Förvärrar PMS och menopausala symptom direkt.</div>
+        <div class="killer-fix">✓ Minimera – särskilt i lutealfas (dag 15–28) i cykeln</div>
+      </div>
+
+      <div class="killer-card">
+        <div class="killer-icon">🏃</div>
+        <div class="killer-name">Överträning & underkonsumtion</div>
+        <div class="killer-text">Energibrist och kronisk överbelastning utan återhämtning signalerar till kroppen att det är otryggt att reproducera. Resultatet kan bli anovulatoriska cykler och uteblivna perioder.</div>
+        <div class="killer-fix">✓ Ät tillräckligt, ta återhämtningsdagar och lyssna på kroppen</div>
+      </div>
+
+      <div class="killer-card">
+        <div class="killer-icon">💊</div>
+        <div class="killer-name">Kronisk pillerprevention</div>
+        <div class="killer-text">P-piller ersätter kroppens egna hormoner med syntetiska. Kan tömma zink, B6 och magnesium – kritiska för hormonproduktionen. Vid utsättning kan naturlig cykelhälsa ta tid att återhämta.</div>
+        <div class="killer-fix">✓ Prata med din läkare om alternativ och näringsstöd</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NÄRING -->
+<section class="nutrition-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Näring</div>
+    <h2 class="section-title reveal">Mat som <em>bygger hormoner</em></h2>
+    <p class="section-desc reveal">Hormoner byggs av fett, aminosyror och mikronäringsämnen. Du är bokstavligen vad du äter – och din hormonhälsa speglar det.</p>
+
+    <div class="nut-grid reveal">
+      <div class="nut-card">
+        <div class="nut-icon">🌿</div>
+        <div class="nut-name">Magnesium</div>
+        <div class="nut-why">Lindrar PMS, stöder sömn i lutealfas och sänker kortisol. De flesta kvinnor är bristfälliga. Kritisk kofaktor i progesteronproduktionen och glukosmetabolism.</div>
+        <div class="nut-src">Pumpakärnor, spenat, mörk choklad</div>
+      </div>
+
+      <div class="nut-card">
+        <div class="nut-icon">🥩</div>
+        <div class="nut-name">Zink</div>
+        <div class="nut-why">Stöder ägglossning, reglerar menscykeln och dämpar androgener vid PCOS. Bristfälligt zink är associerat med oregelbundna cykler och förvärrad akne.</div>
+        <div class="nut-src">Lever, ostron, pumpakärnor</div>
+      </div>
+
+      <div class="nut-card">
+        <div class="nut-icon">☀️</div>
+        <div class="nut-name">D-vitamin</div>
+        <div class="nut-why">Direkt kopplat till cykelhälsa, fertilitet och PMS-reduktion. Bristfälligt D-vitamin förvärrar PCOS och ökar risken för anovulatoriska cykler. Nödvändigt för kalciumupptag.</div>
+        <div class="nut-src">Solljus, lax, ägg + tillskott</div>
+      </div>
+
+      <div class="nut-card">
+        <div class="nut-icon">🥚</div>
+        <div class="nut-name">Kolesterol & fett</div>
+        <div class="nut-why">Könshormoner byggs av kolesterol. Lågfettkost sänker östrogen och progesteron direkt. Ägg, smör och fet fisk är hormonvänliga livsmedel – inte fiender.</div>
+        <div class="nut-src">Ägg, smör, avokado, fett kött</div>
+      </div>
+
+      <div class="nut-card">
+        <div class="nut-icon">🥦</div>
+        <div class="nut-name">DIM & korsblommigt</div>
+        <div class="nut-why">DIM (diindolylmetan) i korsblommiga grönsaker stöder levermetabolism av östrogen och skiftar balansen mot mindre potenta östrogener – naturens eget anti-östrogendominans-verktyg.</div>
+        <div class="nut-src">Broccoli, blomkål, brysselkål</div>
+      </div>
+
+      <div class="nut-card">
+        <div class="nut-icon">🐟</div>
+        <div class="nut-name">Omega-3 & aminosyror</div>
+        <div class="nut-why">Minskar proinflammatoriska prostaglandiner som orsakar mensvärk. EPA och DHA stöder hjärnhälsa och humörreglering. Kritiskt för hormonreceptorernas känslighet. Fenylalanin – en aminosyra som bildar dopamin och noradrenalin – är ett av de mest underskattade verktygen för hormonell balans och motivation.</div>
+        <div class="nut-src">Vild lax, makrill, sardiner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORGONPROTOKOLL -->
+<section class="protocol-section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Morgonprotokoll</div>
+    <h2 class="section-title reveal">60 minuter som <em>sätter dagen</em></h2>
+    <p class="section-desc reveal">Konsistens slår perfektion. Gör dessa saker varje morgon och ditt hormonsystem tackar dig.</p>
+
+    <div class="protocol-list reveal">
+      <div class="protocol-item">
+        <div class="protocol-time">0–5 min</div>
+        <div class="protocol-content">
+          <h4>Inga skärmar</h4>
+          <p>Låt kortisolets morgonpuls (CAR) stiga naturligt. Sociala medier direkt vid uppvaknande saboterar dygnsrytmen och stressar kortisol-axeln i fel riktning.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-time">5–15 min</div>
+        <div class="protocol-content">
+          <h4>Ute i morgonljus</h4>
+          <p>Synkroniserar den cirkadiska klockan och startar kortisolpulsen rätt. Stöder melatoninproduktionen på kvällen. Påverkar sömnkvaliteten och progesteronet samma kväll.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-time">15–20 min</div>
+        <div class="protocol-content">
+          <h4>Rörlighet, mobilitet & bäckenbottenträning</h4>
+          <p>Morgonen är optimal för lågintensiv aktivering – inte tung träning. Mjuk ledmobilitet och rörlighetsövningar aktiverar nervsystemet varsamt. Bäckenbottenträning stärker muskulaturen som stöder livmoder, blåsa och tarm, förbättrar bäckenblodflödet och är direkt kopplat till minskad menssmärta och bättre hormonell cirkulation. Spara styrketräningen till eftermiddagen när kroppstemperaturen är högre och muskeltonus som bäst.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-time">20–25 min</div>
+        <div class="protocol-content">
+          <h4>Box breathing 4-4-4-4</h4>
+          <p>Sänker grundkortisol. Aktiverar vagusnerven. Sätter stressnivån för hela dagen på en lägre baslinje – direkt gynnsamt för progesteronbalansen.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-time">25–50 min</div>
+        <div class="protocol-content">
+          <h4>Proteinrik frukost</h4>
+          <p>Stabiliserar blodsockret från morgonen. Ägg, lever eller animaliskt protein. Undvik att hoppa över frukost – det stressar kortisol ytterligare och förvärrar hormonell obalans.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-time">50–60 min</div>
+        <div class="protocol-content">
+          <h4>Intention & prioritering</h4>
+          <p>En lugn stund utan input – planera dagen, skriv dagbok eller meditera. Mentalt lugn på morgonen sätter kortisolkurvan rättare för eftermiddagens progesteron-produktion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER-SEKTIONEN -->
+<section style="background:#180C14; padding:80px 24px;">
+  <div class="container">
+    <div class="section-eyebrow reveal">För relationen</div>
+    <h2 class="section-title reveal">Vad du som kvinna bör veta om <em>hans hormoner</em></h2>
+    <p class="section-desc reveal">Hans hormonsystem är inte enklare än ditt – det är bara annorlunda. Att förstå det skapar tolerans, sammanhang och ett starkare partnerskap.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;" class="reveal">
+
+      <div style="background:#0E080C; border-radius:14px; padding:28px; border-left:3px solid #6A9A70;">
+        <div style="font-size:26px; margin-bottom:12px;">📉</div>
+        <div style="font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:#6A9A70; margin-bottom:8px;">Hans energidalar är inte lathet</div>
+        <p style="font-size:13px; color:rgba(238,228,232,0.55); line-height:1.65;">Testosteron sjunker under sömnbrist, kronisk stress och återhämtningsbrist. När han är omotiverad och avtrubbad kan det vara ett hormonellt tillstånd, inte karaktärsfel. Det är biokemi – inte ointresse.</p>
+      </div>
+
+      <div style="background:#0E080C; border-radius:14px; padding:28px; border-left:3px solid #6A9A70;">
+        <div style="font-size:26px; margin-bottom:12px;">🌅</div>
+        <div style="font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:#6A9A70; margin-bottom:8px;">Han är som bäst på morgonen</div>
+        <p style="font-size:13px; color:rgba(238,228,232,0.55); line-height:1.65;">Testosteron peakar 60–90 minuter efter uppvaknande. Hans fokus, driv och kommunikationsförmåga är som starkast på förmiddagen. Viktiga samtal och beslut landar bättre då än på kvällen.</p>
+      </div>
+
+      <div style="background:#0E080C; border-radius:14px; padding:28px; border-left:3px solid #6A9A70;">
+        <div style="font-size:26px; margin-bottom:12px;">😤</div>
+        <div style="font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:#6A9A70; margin-bottom:8px;">Irritabilitet kan vara hormonellt</div>
+        <p style="font-size:13px; color:rgba(238,228,232,0.55); line-height:1.65;">Lågt testosteron och högt kortisol ger irritabilitet, otålighet och kortare stubin – precis som PMS. Kronisk stress är den vanligaste orsaken. Han löser det inte med "ta det lugnt" – han behöver faktisk återhämtning.</p>
+      </div>
+
+      <div style="background:#0E080C; border-radius:14px; padding:28px; border-left:3px solid #6A9A70;">
+        <div style="font-size:26px; margin-bottom:12px;">🏋️</div>
+        <div style="font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:#6A9A70; margin-bottom:8px;">Träning är hans hormonmedicin</div>
+        <p style="font-size:13px; color:rgba(238,228,232,0.55); line-height:1.65;">Styrketräning och fysisk rörelse är inte bara hobby – det är hans primära verktyg för att reglera testosteron, kortisol och humör. Att skydda hans träningsrutin är att skydda er relation.</p>
+      </div>
+
+      <div style="background:#0E080C; border-radius:14px; padding:28px; border-left:3px solid #6A9A70;">
+        <div style="font-size:26px; margin-bottom:12px;">😴</div>
+        <div style="font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:#6A9A70; margin-bottom:8px;">Sömn är hans testosteron-booster</div>
+        <p style="font-size:13px; color:rgba(238,228,232,0.55); line-height:1.65;">En veckas sömnbrist sänker hans testosteron med upp till 15%. Det syns i humör, libido och energi. Att värna om gemensam god sömn är ett av de mest direkta sätten att stötta hans välmående.</p>
+      </div>
+
+      <div style="background:#0E080C; border-radius:14px; padding:28px; border-left:3px solid #6A9A70;">
+        <div style="font-size:26px; margin-bottom:12px;">🤝</div>
+        <div style="font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:#6A9A70; margin-bottom:8px;">Han pratar mindre när kortisolet är högt</div>
+        <p style="font-size:13px; color:rgba(238,228,232,0.55); line-height:1.65;">Under stress drar sig många män inåt – det är ett evolutionärt mönster kopplat till kortisol och testosteron. Det är sällan ointresse för dig. Ge utrymme, och han återvänder oftast av sig själv.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TEASER -->
+<section class="teaser-section">
+  <div class="teaser-inner">
+    <div class="teaser-badge">✨ Fördjupning hormoner – Kommer snart</div>
+    <h2 class="teaser-title">Vill du förstå allt<span>på djupet?</span></h2>
+    <div class="teaser-line"></div>
+    <p class="teaser-text">Den här guiden är ett smakprov. Fördjupning hormoner ger dig den fullständiga bilden – östrogen, progesteron, menscykel, näring, stresshantering och ett 60-dagars schema att följa. Den fungerar också som bas för den gemensamma fördjupningen för dig, din partner och familjen.</p>
+
+    <div class="teaser-modules">
+      <div class="teaser-module">
+        <div class="mod-n">1</div>
+        <div class="mod-t">Hormonsystemets grunder</div>
+      </div>
+      <div class="teaser-module">
+        <div class="mod-n">2</div>
+        <div class="mod-t">Östrogen & cykeloptimering</div>
+      </div>
+      <div class="teaser-module">
+        <div class="mod-n">3</div>
+        <div class="mod-t">Kortisol & stresshantering</div>
+      </div>
+      <div class="teaser-module">
+        <div class="mod-n">4</div>
+        <div class="mod-t">Näring & hormoner</div>
+      </div>
+      <div class="teaser-module">
+        <div class="mod-n">5</div>
+        <div class="mod-t">Sömn som strategi</div>
+      </div>
+      <div class="teaser-module">
+        <div class="mod-n">6</div>
+        <div class="mod-t">60-dagars schema att följa</div>
+      </div>
+    </div>
+
+    <a href="https://www.instagram.com/healwithandreas" class="teaser-cta" target="_blank">
+      📸 FÖLJ @healwithandreas FÖR LANSERING
+    </a>
+
+    <p class="disclaimer">
+      Informationsunderlag baserat på vetenskapliga källor · Ej medicinsk rådgivning<br>
+      Rådfråga alltid din läkare vid funderingar kring din hormonhälsa
+    </p>
+  </div>
+</section>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
